@@ -7,6 +7,7 @@ import { faEnvelopeOpen, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const ContactItem = ({contact}) => {
   const contactContext = useContext(ContactContext);
+
   const { deleteContact, setCurrent, clearCurrent } = contactContext;
 
   const { name, id, email, phone, type } = contact;
