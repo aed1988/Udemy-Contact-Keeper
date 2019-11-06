@@ -7,7 +7,7 @@ import { faIdCardAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = ({ title, icon }) => {
   return (
-    <div class='navbar bg-primary'>
+    <div className='navbar bg-primary'>
       <h1>
         <FontAwesomeIcon icon={faIdCardAlt} /> {title}
       </h1>
@@ -17,6 +17,12 @@ const Navbar = ({ title, icon }) => {
         </li>
         <li>
           <Link to='/about'>About</Link>
+        </li>
+        <li>
+          <Link to='/register'>Register</Link>
+        </li>
+        <li>
+          <Link to='/login'>Login</Link>
         </li>
       </ul>
     </div>

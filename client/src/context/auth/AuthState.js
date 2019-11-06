@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
-import ContactContext from './authContext';
-import contactReducer from './authReducer';
+import AuthContext from './authContext';
+import authReducer from './authReducer';
 import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
@@ -47,4 +47,4 @@ const AuthState = props => {
   )
 };
 
-export default ContactState
+export default AuthState
