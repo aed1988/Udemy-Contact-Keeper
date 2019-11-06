@@ -12,7 +12,7 @@ const ContactFilter = () => {
     if (filtered === null) {
       text.current.value = ''
     }
-  }, [])
+  })
 
   const onChange = e => {
     if (text.current.value !== '') {

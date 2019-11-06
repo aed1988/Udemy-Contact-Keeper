@@ -11,7 +11,6 @@ import {
   FILTER_CONTACTS,
   CLEAR_FILTER
 } from '../types';
-import { stat } from 'fs';
 
 const ContactState = props => {
   const initialState = {
