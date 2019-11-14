@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import ContactContext from '../../context/contacts/contactContext';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelopeOpen, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const ContactItem = ({contact}) => {
