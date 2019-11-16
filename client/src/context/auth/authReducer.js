@@ -6,6 +6,7 @@ import {
   AUTH_ERROR,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
+  LOGOUT,
   /*USER_LOADED,
   AUTH_ERROR,
   LOGIN_SUCCESS,
@@ -32,6 +33,7 @@ export default (state, action) => {
         isAuthenticated: true,
         loading: false
       }
+    case LOGOUT:
     case LOGIN_FAIL:
     case AUTH_ERROR:
     case REGISTER_FAIL:
