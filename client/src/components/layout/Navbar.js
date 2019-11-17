@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
@@ -13,8 +13,13 @@ const Navbar = ({ title, icon }) => {
   const authContext = useContext(AuthContext);
   const contactContext = useContext(ContactContext);
 
-  const { isAuthenticated, logout, user } = authContext;
+  const { isAuthenticated, logout, user, loadUser } = authContext;
   const { clearContacts } = contactContext;
+
+  useEffect(() => {
+    loadUser();
+    // eslint-disable-next-line
+  }, [])
 
   const onLogout = () => {
     logout();
