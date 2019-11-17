@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import AuthContext from '../../context/auth/authContext';
+import ContactContext from '../../context/contacts/contactContext';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIdCardAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
@@ -10,11 +11,14 @@ import { faIdCardAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 const Navbar = ({ title, icon }) => {
 
   const authContext = useContext(AuthContext);
+  const contactContext = useContext(ContactContext);
 
   const { isAuthenticated, logout, user } = authContext;
+  const { clearContacts } = contactContext;
 
   const onLogout = () => {
     logout();
+    clearContacts();
   }
 
 
